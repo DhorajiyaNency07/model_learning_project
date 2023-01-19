@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:model_learning/core/common_widgets/second_common_model_.dart';
-
+import '../core/common_widgets/second_common_model_.dart';
 import '../data/models/map_list_to_list_model.dart';
 
 class SecondModelCallingScreen extends StatefulWidget {
@@ -12,15 +11,20 @@ class SecondModelCallingScreen extends StatefulWidget {
 }
 
 class _SecondModelCallingScreenState extends State<SecondModelCallingScreen> {
-  // SecondCommonModel? secondCommonModel;
+  OppoCommonModel? oppoCommonModel;
+  VivoCommonModel? vivoCommonModel;
 
   @override
   void initState() {
     // TODO: implement initState
-    // secondCommonModel = SecondCommonModel.fromJson(
-    //     ListToListAppDataThree.listToListMobileDataMapThree);
+    vivoCommonModel =
+        VivoCommonModel(ListToListAppDataThree.listToListMobileDataMapThree);
+    oppoCommonModel = OppoCommonModel.fromJson(
+        ListToListAppDataThree.listToListMobileDataMapThree);
+
     super.initState();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -31,21 +35,14 @@ class _SecondModelCallingScreenState extends State<SecondModelCallingScreen> {
           const SizedBox(
             height: 20,
           ),
-          // Text("first: ${secondCommonModel!.first}"),
+          Text("oppo data: ${oppoCommonModel?.first?.mobileOppo}"),
+          Text("vivo data: ${vivoCommonModel?.second?.mobileVivo}"),
           const SizedBox(
             height: 20,
           ),
-          // Text("second: ${secondCommonModel!.second}"),
           const SizedBox(
             height: 20,
           ),
-          Expanded(
-            child: ListView.builder(
-              // itemCount: secondCommonModel!.first!.length,
-              itemBuilder: (context, index) => const Text(""),
-                  // Text("Oppo Mobile: ${secondCommonModel!.first!.}"),
-            ),
-          )
         ],
       ),
     );
