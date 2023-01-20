@@ -78,39 +78,3 @@ class MobileVivo {
     );
   }
 }
-
-// ////________________________________________________________________________
-// class VivoCommonModel {
-//   Second? second;
-//
-//   VivoCommonModel(Map<String,dynamic> listToListMobileDataMapThree, {
-//     this.second,
-//   });
-//
-//
-//   VivoCommonModel.fromJson(Map<String, dynamic> json) {
-//     second = Second.fromJson(json["second"]);
-//   }
-// }
-//
-// class Second {
-//   List<MobileVivo>? mobileVivo;
-//   Second({this.mobileVivo,});
-//   Second.fromJson(Map<String, dynamic>json){
-//     mobileVivo = List<MobileVivo>.from(
-//         json["mobile_vivo"].map((value) => MobileVivo.fromJson(value)));
-//   }
-//
-// }
-//
-// class MobileVivo {
-//   String? mobile;
-//   int? price;
-//
-//   MobileVivo({this.mobile, this.price,});
-//
-//   MobileVivo.fromJson(Map<String,dynamic>json){
-//     mobile = json["mobile"];
-//     price = json["price"];
-//   }
-// }

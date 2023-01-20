@@ -34,21 +34,3 @@ class DataList {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/// MY EFFORTS////
-// dataList: List<dataList>.from(json["data_list"].map((value) => DataList.fromJson(value))),
-// dataList: Map<dataList>.from(json["data_list"].map((value) => DataList.fromJson(value))),
-// dataList: Map<MobileNameData>.from(json["data_list"].map((value) => DataList.fromJson(value))),
-// json['data_list']
-// List<StudentList>.from(json["student_list"].map((value) => StudentList.fromJson(value))),

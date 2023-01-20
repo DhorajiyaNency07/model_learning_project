@@ -12,7 +12,6 @@ class SecondModelCallingScreen extends StatefulWidget {
 
 class _SecondModelCallingScreenState extends State<SecondModelCallingScreen> {
   OppoCommonModel? oppoCommonModel;
-  // VivoCommonModel? vivoCommonModel;
 
   @override
   void initState() {
@@ -26,14 +25,22 @@ class _SecondModelCallingScreenState extends State<SecondModelCallingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Second Common Model Calling Screen"),
+      ),
       body: Column(
         children: [
           const SizedBox(
             height: 20,
           ),
-          Text("oppo data: ${oppoCommonModel!.first!.mobileOppo![0].mobile}"),
-          // Text("vivo data: ${vivoCommonModel?.second?.mobileVivo}"),
+          Text("oppo data 1: ${oppoCommonModel!.first!.mobileOppo![0].mobile}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("oppo data 1: ${oppoCommonModel!.first!.mobileOppo![0].price}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("oppo data 2: ${oppoCommonModel!.first!.mobileOppo![1].mobile}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("oppo data 2: ${oppoCommonModel!.first!.mobileOppo![1].price}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("oppo data 1: ${oppoCommonModel!.second!.mobileVivo![0].mobile}",style: const TextStyle(fontWeight: FontWeight.bold,height: 4,fontSize: 18)),
+          Text("oppo data 1: ${oppoCommonModel!.second!.mobileVivo![0].price}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("oppo data 2: ${oppoCommonModel!.second!.mobileVivo![1].mobile}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("oppo data 2: ${oppoCommonModel!.second!.mobileVivo![1].price}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
           const SizedBox(
             height: 20,
           ),

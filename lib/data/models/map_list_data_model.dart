@@ -1,9 +1,4 @@
 class LearningAppData {
-
-  // String, dynamic   do specific its imp...
-  // otherwise show error on
-  // on stf widget, model calling
-  //    commonMobileDataModel = CommonMobileDataModel.fromJson(LearningAppData.MobileNameData); ==> {{ MobileNameData}}
   static Map<String, dynamic> mobileNameData = {
     "seller_name": "Gujarat_mobiles",
     "place": "surat",
@@ -52,11 +47,3 @@ class LearningAppData {
   };
 }
 
-// {
-// "mobile": "Motorola",
-// "price": 9999,
-// },
-// {
-// "mobile": "Infinix",
-// "price": 15000,
-// },

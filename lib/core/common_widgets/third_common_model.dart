@@ -68,28 +68,3 @@ class ThirdKeyOfMap {
     );
   }
 }
-
-// class ThirdCommonModel {
-//   final Map? first;
-//   final Map? second;
-//   final Map? third;
-//
-//   ThirdCommonModel({
-//     this.first,
-//     this.second,
-//     this.third,
-//   });
-//
-//   factory ThirdCommonModel.fromJson(Map<String,dynamic>json){
-//     return ThirdCommonModel(
-//       first: json['first'],
-//       second: json['second'],
-//       third: json['third'],
-//     );
-//   }
-// }
-
-
-//////___________________________________________________
-// mobile: json["mobile"] as String,
-//     price: json["price"] as int,

@@ -33,8 +33,8 @@ class _ModelLearningScreenState extends State<ModelLearningScreen> {
           const SizedBox(
             height: 20,
           ),
-          Text("seller name: ${commonMobileDataModel!.sellerName}"),
-          Text("place: ${commonMobileDataModel!.place}"),
+          Text("seller name: ${commonMobileDataModel!.sellerName}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
+          Text("place: ${commonMobileDataModel!.place}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 18)),
           // Text("data_list: ${commonMobileDataModel!.data_list}"),  // error, it's wrong because it's also have list
           const SizedBox(
             height: 20,
@@ -46,11 +46,9 @@ class _ModelLearningScreenState extends State<ModelLearningScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
-                    // mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      // const Text("data list: "),
-                      Text("mobile: ${commonMobileDataModel!.dataList![index].mobile}"),
-                      Text("price: ${commonMobileDataModel!.dataList![index].price}"),
+                      Text("mobile: ${commonMobileDataModel!.dataList![index].mobile}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 16)),
+                      Text("price: ${commonMobileDataModel!.dataList![index].price}",style: const TextStyle(fontWeight: FontWeight.bold,height: 2,fontSize: 16)),
                     ],
                   ),
                 ],

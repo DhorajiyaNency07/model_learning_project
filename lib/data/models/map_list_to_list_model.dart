@@ -8,8 +8,8 @@ class ListToListAppDataThree {
           "price": 37000,
         },
         {
-          "mobile": "Oppo",
-          "price": 37000,
+          "mobile": "Oppo2",
+          "price": 37999,
         },
       ],
     },
@@ -17,11 +17,11 @@ class ListToListAppDataThree {
       "mobile_vivo": [
         {
           "mobile": "Vivo",
-          "price": 37000,
+          "price": 59999,
         },
         {
-          "mobile": "Oppo",
-          "price": 37000,
+          "mobile": "Vivo2",
+          "price": 50000,
         },
       ],
     },
