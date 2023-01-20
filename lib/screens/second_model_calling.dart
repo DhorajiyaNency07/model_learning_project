@@ -12,16 +12,13 @@ class SecondModelCallingScreen extends StatefulWidget {
 
 class _SecondModelCallingScreenState extends State<SecondModelCallingScreen> {
   OppoCommonModel? oppoCommonModel;
-  VivoCommonModel? vivoCommonModel;
+  // VivoCommonModel? vivoCommonModel;
 
   @override
   void initState() {
     // TODO: implement initState
-    vivoCommonModel =
-        VivoCommonModel(ListToListAppDataThree.listToListMobileDataMapThree);
     oppoCommonModel = OppoCommonModel.fromJson(
         ListToListAppDataThree.listToListMobileDataMapThree);
-
     super.initState();
   }
 
@@ -35,8 +32,8 @@ class _SecondModelCallingScreenState extends State<SecondModelCallingScreen> {
           const SizedBox(
             height: 20,
           ),
-          Text("oppo data: ${oppoCommonModel?.first?.mobileOppo}"),
-          Text("vivo data: ${vivoCommonModel?.second?.mobileVivo}"),
+          Text("oppo data: ${oppoCommonModel!.first!.mobileOppo![0].mobile}"),
+          // Text("vivo data: ${vivoCommonModel?.second?.mobileVivo}"),
           const SizedBox(
             height: 20,
           ),

@@ -13,7 +13,7 @@ class ThirdCommonModel {
     return ThirdCommonModel(
       first: FirstKeyOfMap.fromJson(json["first"]),
       second: SecondKeyOfMap.fromJson(json["second"]),
-      third: ThirdKeyOfMap.fromJson(json["thord"]),
+      third: ThirdKeyOfMap.fromJson(json["third"]),
     );
   }
 }

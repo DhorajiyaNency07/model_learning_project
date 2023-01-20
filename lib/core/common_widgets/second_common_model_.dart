@@ -1,69 +1,116 @@
 class OppoCommonModel {
-  First? first;
+  final First? first;
+  final Second? second;
 
   OppoCommonModel({
     this.first,
+    this.second,
   });
 
-  OppoCommonModel.fromJson(Map<dynamic, dynamic> json) {
-    first = First.fromJson(json["first"]);
+  factory OppoCommonModel.fromJson(Map<String, dynamic> json) {
+    return OppoCommonModel(
+      first: First.fromJson(json["first"]),
+      second: Second.fromJson(json["second"]),
+    );
   }
 }
 
 class First {
-  List<MobileOppo>? mobileOppo;
+  final List<MobileOppo>? mobileOppo;
 
-  First({this.mobileOppo,});
-
-  First.fromJson(Map<dynamic, dynamic>json){
-    mobileOppo = List<MobileOppo>.from(
-        json["mobile_oppo"].map((value) => MobileOppo.fromJson(value)));
-  }
-}
-
-class MobileOppo {
-  String? mobile;
-  int? price;
-
-  MobileOppo({this.mobile, this.price,});
-
-  MobileOppo.fromJson(Map<String,dynamic>json){
-    mobile = json["mobile"];
-    price = json["price"];
-  }
-}
-////________________________________________________________________________
-class VivoCommonModel {
-  Second? second;
-
-  VivoCommonModel(Map<dynamic,dynamic> listToListMobileDataMapThree, {
-    this.second,
+  First({
+    this.mobileOppo,
   });
 
-
-  VivoCommonModel.fromJson(Map<dynamic, dynamic> json) {
-    second = Second.fromJson(json["second"]);
+  factory First.fromJson(Map<String, dynamic> json) {
+    return First(
+      mobileOppo: List<MobileOppo>.from(
+          json["mobile_oppo"].map((value) => MobileOppo.fromJson(value))),
+    );
   }
 }
 
 class Second {
-  List<MobileVivo>? mobileVivo;
-  Second({this.mobileVivo,});
-  Second.fromJson(Map<dynamic, dynamic>json){
-    mobileVivo = List<MobileVivo>.from(
-        json["mobile_vivo"].map((value) => MobileVivo.fromJson(value)));
-  }
+  final List<MobileVivo>? mobileVivo;
 
+  Second({
+    this.mobileVivo,
+  });
+
+  factory Second.fromJson(Map<String, dynamic> json) {
+    return Second(
+      mobileVivo: List<MobileVivo>.from(
+          json["mobile_vivo"].map((value) => MobileVivo.fromJson(value))),
+    );
+  }
+}
+
+class MobileOppo {
+  final String? mobile;
+  final int? price;
+
+  MobileOppo({
+    this.mobile,
+    this.price,
+  });
+
+  factory MobileOppo.fromJson(Map<String, dynamic> json) {
+    return MobileOppo(
+      mobile: json["mobile"],
+      price: json["price"],
+    );
+  }
 }
 
 class MobileVivo {
-  String? mobile;
-  int? price;
+  final String? mobile;
+  final int? price;
 
-  MobileVivo({this.mobile, this.price,});
+  MobileVivo({
+    this.mobile,
+    this.price,
+  });
 
-  MobileVivo.fromJson(Map<String,dynamic>json){
-    mobile = json["mobile"];
-    price = json["price"];
+  factory MobileVivo.fromJson(Map<String, dynamic> json) {
+    return MobileVivo(
+      mobile: json["mobile"],
+      price: json["price"],
+    );
   }
 }
+
+// ////________________________________________________________________________
+// class VivoCommonModel {
+//   Second? second;
+//
+//   VivoCommonModel(Map<String,dynamic> listToListMobileDataMapThree, {
+//     this.second,
+//   });
+//
+//
+//   VivoCommonModel.fromJson(Map<String, dynamic> json) {
+//     second = Second.fromJson(json["second"]);
+//   }
+// }
+//
+// class Second {
+//   List<MobileVivo>? mobileVivo;
+//   Second({this.mobileVivo,});
+//   Second.fromJson(Map<String, dynamic>json){
+//     mobileVivo = List<MobileVivo>.from(
+//         json["mobile_vivo"].map((value) => MobileVivo.fromJson(value)));
+//   }
+//
+// }
+//
+// class MobileVivo {
+//   String? mobile;
+//   int? price;
+//
+//   MobileVivo({this.mobile, this.price,});
+//
+//   MobileVivo.fromJson(Map<String,dynamic>json){
+//     mobile = json["mobile"];
+//     price = json["price"];
+//   }
+// }
